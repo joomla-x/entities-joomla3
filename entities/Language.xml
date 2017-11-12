@@ -143,7 +143,7 @@
             name="published"
             type="int"
             required="true"
-            default="1"
+            default="0"
             input="list"
             label="JSTATUS"
             description="COM_LANGUAGES_FIELD_PUBLISHED_DESC"

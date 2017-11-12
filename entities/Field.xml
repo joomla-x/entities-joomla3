@@ -151,7 +151,7 @@
             name="state"
             type="boolean"
             required="true"
-            default="1"
+            default="0"
             input="list"
             label="JSTATUS"
             description="JFIELD_PUBLISHED_DESC"
