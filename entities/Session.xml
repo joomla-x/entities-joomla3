@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Session">
+
+    <storage>
+        <default table="session"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="session_id"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <field
+            name="client_id"
+            type="tinyint"
+            default="NULL"
+        >
+        </field>
+
+        <field
+            name="guest"
+            type="tinyint"
+            default="1"
+        >
+        </field>
+
+        <field
+            name="time"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="data"
+            type="mediumtext"
+        >
+        </field>
+
+        <field
+            name="userid"
+            type="int"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="username"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

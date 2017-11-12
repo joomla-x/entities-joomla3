@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Update">
+
+    <storage>
+        <default table="updates"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="update_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="update_site_id"
+            type="int"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="extension_id"
+            type="int"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="name"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="description"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="element"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="type"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="folder"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="client_id"
+            type="tinyint"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="version"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="data"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="detailsurl"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="infourl"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="extra_query"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

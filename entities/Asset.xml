@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Asset">
+
+    <storage>
+        <default table="assets"/>
+    </storage>
+
+    <fields>
+
+        <!-- Primary Key -->
+        <field
+            name="id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Nested set parent. -->
+        <field
+            name="parent_id"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Nested set lft. -->
+        <field
+            name="lft"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Nested set rgt. -->
+        <field
+            name="rgt"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- The cached level in the nested tree. -->
+        <field
+            name="level"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- The unique name for the asset.\n -->
+        <field
+            name="name"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <!-- The descriptive title for the asset. -->
+        <field
+            name="title"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <!-- JSON encoded access control. -->
+        <field
+            name="rules"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

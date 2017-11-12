@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\BannerTrack">
+
+    <storage>
+        <default table="banner_tracks"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="track_date"
+            type="datetime"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="track_type"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="banner_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="count"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

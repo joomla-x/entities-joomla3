@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\FinderTerm">
+
+    <storage>
+        <default table="finder_terms"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="term_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="term"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="stem"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="common"
+            type="boolean"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="phrase"
+            type="boolean"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="weight"
+            type="float"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="soundex"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="links"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="language"
+            type="char"
+            required="true"
+            default=""
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

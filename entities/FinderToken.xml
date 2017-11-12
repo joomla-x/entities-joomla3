@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\FinderToken">
+
+    <storage>
+        <default table="finder_tokens"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="term"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="stem"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="common"
+            type="boolean"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="phrase"
+            type="boolean"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="weight"
+            type="float"
+            required="true"
+            default="1"
+        >
+        </field>
+
+        <field
+            name="context"
+            type="boolean"
+            required="true"
+            default="2"
+        >
+        </field>
+
+        <field
+            name="language"
+            type="char"
+            required="true"
+            default=""
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

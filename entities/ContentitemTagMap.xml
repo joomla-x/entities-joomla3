@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\ContentitemTagMap">
+
+    <storage>
+        <default table="contentitem_tag_map"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="type_alias"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <!-- PK from the core content table -->
+        <field
+            name="core_content_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- PK from the content type table -->
+        <field
+            name="content_item_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- PK from the tag table -->
+        <field
+            name="tag_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Date of most recent save for this tag-item -->
+        <field
+            name="tag_date"
+            type="timestamp"
+            required="true"
+            default="CURRENT_TIMESTAMP"
+        >
+        </field>
+
+        <!-- PK from the content_type table -->
+        <field
+            name="type_id"
+            type="mediumint"
+            required="true"
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

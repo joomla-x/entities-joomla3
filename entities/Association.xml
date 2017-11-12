@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Association">
+
+    <storage>
+        <default table="associations"/>
+    </storage>
+
+    <fields>
+
+        <!-- A reference to the associated item. -->
+        <field
+            name="id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- The context of the associated item. -->
+        <field
+            name="context"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <!-- The key for the association computed from an md5 on associated ids. -->
+        <field
+            name="key"
+            type="char"
+            required="true"
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

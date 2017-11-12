@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\MessageCfg">
+
+    <storage>
+        <default table="messages_cfg"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="user_id"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="cfg_name"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <field
+            name="cfg_value"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

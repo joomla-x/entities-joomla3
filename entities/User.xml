@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\User">
+
+    <storage>
+        <default table="users"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="id"
+            type="int"
+            required="true"
+            input="number"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            description="JGLOBAL_FIELD_ID_DESC"
+            default="0"
+            readonly="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="name"
+            type="varchar"
+            required="true"
+            default=""
+            input="text"
+            label="COM_USERS_USER_FIELD_NAME_LABEL"
+            description="COM_USERS_USER_FIELD_NAME_DESC"
+            size="30"
+        >
+            <validation rule="maxlen" value="30"/>
+        </field>
+
+        <field
+            name="username"
+            type="varchar"
+            required="true"
+            default=""
+            input="text"
+            label="COM_USERS_USER_FIELD_USERNAME_LABEL"
+            description="COM_USERS_USER_FIELD_USERNAME_DESC"
+            size="30"
+        >
+            <validation rule="maxlen" value="30"/>
+        </field>
+
+        <field
+            name="email"
+            type="varchar"
+            required="true"
+            default=""
+            input="email"
+            label="JGLOBAL_EMAIL"
+            description="COM_USERS_USER_FIELD_EMAIL_DESC"
+            size="30"
+        >
+            <validation rule="email"/>
+            <validation rule="maxlen" value="30"/>
+        </field>
+
+        <field
+            name="password"
+            type="varchar"
+            required="true"
+            default=""
+            input="password"
+            label="JGLOBAL_PASSWORD"
+            description="COM_USERS_USER_FIELD_PASSWORD_DESC"
+            filter="raw"
+            size="30"
+        >
+            <validation rule="password"/>
+            <validation rule="maxlen" value="30"/>
+        </field>
+
+        <field
+            name="block"
+            type="tinyint"
+            required="true"
+            default="0"
+            input="radio"
+            label="COM_USERS_USER_FIELD_BLOCK_LABEL"
+            description="COM_USERS_USER_FIELD_BLOCK_DESC"
+        >
+            <option value="1">COM_USERS_USER_FIELD_BLOCK</option>
+            <option value="0">COM_USERS_USER_FIELD_ENABLE</option>
+        </field>
+
+        <field
+            name="sendEmail"
+            type="tinyint"
+            default="0"
+            input="radio"
+            label="COM_USERS_USER_FIELD_SENDEMAIL_LABEL"
+            description="COM_USERS_USER_FIELD_SENDEMAIL_DESC"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+            name="registerDate"
+            type="datetime"
+            required="true"
+            default="0000-00-00 00:00:00"
+            input="calendar"
+            label="COM_USERS_USER_FIELD_REGISTERDATE_LABEL"
+            description="COM_USERS_USER_FIELD_REGISTERDATE_DESC"
+            readonly="true"
+            size="22"
+            filter="user_utc"
+        >
+            <validation rule="maxlen" value="22"/>
+        </field>
+
+        <field
+            name="lastvisitDate"
+            type="datetime"
+            required="true"
+            default="0000-00-00 00:00:00"
+            input="calendar"
+            label="COM_USERS_USER_FIELD_LASTVISIT_LABEL"
+            description="COM_USERS_USER_FIELD_LASTVISIT_DESC"
+            readonly="true"
+            size="22"
+            filter="user_utc"
+        >
+            <validation rule="maxlen" value="22"/>
+        </field>
+
+        <field
+            name="activation"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <field
+            name="params"
+            type="json"
+            required="true"
+        >
+        </field>
+
+        <!-- Date of last password reset -->
+        <field
+            name="lastResetTime"
+            type="datetime"
+            required="true"
+            default="0000-00-00 00:00:00"
+            input="calendar"
+            label="COM_USERS_USER_FIELD_LASTRESET_LABEL"
+            description="COM_USERS_USER_FIELD_LASTRESET_DESC"
+            readonly="true"
+            size="22"
+            filter="user_utc"
+        >
+            <validation rule="maxlen" value="22"/>
+        </field>
+
+        <!-- Count of password resets since lastResetTime -->
+        <field
+            name="resetCount"
+            type="int"
+            required="true"
+            default="0"
+            input="number"
+            label="COM_USERS_USER_FIELD_RESETCOUNT_LABEL"
+            description="COM_USERS_USER_FIELD_RESETCOUNT_DESC"
+            readonly="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Two factor authentication encrypted keys -->
+        <field
+            name="otpKey"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <!-- One time emergency passwords -->
+        <field
+            name="otep"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <!-- Require user to reset password on next login -->
+        <field
+            name="requireReset"
+            type="tinyint"
+            required="true"
+            default="0"
+            input="radio"
+            label="COM_USERS_USER_FIELD_REQUIRERESET_LABEL"
+            description="COM_USERS_USER_FIELD_REQUIRERESET_DESC"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

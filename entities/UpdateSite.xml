@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\UpdateSite">
+
+    <storage>
+        <default table="update_sites"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="update_site_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="name"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="type"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <field
+            name="location"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="enabled"
+            type="int"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="last_check_timestamp"
+            type="bigint"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="extra_query"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

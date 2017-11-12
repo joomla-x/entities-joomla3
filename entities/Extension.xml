@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Extension">
+
+    <storage>
+        <default table="extensions"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="extension_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Parent package ID for extensions installed as a package. -->
+        <field
+            name="package_id"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="name"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="type"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="element"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="folder"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="client_id"
+            type="tinyint"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="enabled"
+            type="tinyint"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="access"
+            type="int"
+            required="true"
+            default="1"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="protected"
+            type="tinyint"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="manifest_cache"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="params"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="custom_data"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="system_data"
+            type="text"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="checked_out"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="checked_out_time"
+            type="datetime"
+            required="true"
+            default="0000-00-00 00:00:00"
+        >
+        </field>
+
+        <field
+            name="ordering"
+            type="int"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="state"
+            type="int"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

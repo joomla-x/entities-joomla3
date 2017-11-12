@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Viewlevel">
+
+    <storage>
+        <default table="viewlevels"/>
+    </storage>
+
+    <fields>
+
+        <!-- Primary Key -->
+        <field
+            name="id"
+            type="int"
+            required="true"
+            input="hidden"
+            default="0"
+            readonly="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="title"
+            type="varchar"
+            required="true"
+            default=""
+            input="text"
+            label="COM_USERS_LEVEL_FIELD_TITLE_LABEL"
+            description="COM_USERS_LEVEL_FIELD_TITLE_DESC"
+            size="50"
+        >
+            <validation rule="maxlen" value="50"/>
+        </field>
+
+        <field
+            name="ordering"
+            type="int"
+            required="true"
+            default="0"
+            input="text"
+            label="JFIELD_ORDERING_LABEL"
+            description="JFIELD_ORDERING_DESC"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- JSON encoded access control. -->
+        <field
+            name="rules"
+            type="varchar"
+            required="true"
+            input="hidden"
+            filter="int_array"
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

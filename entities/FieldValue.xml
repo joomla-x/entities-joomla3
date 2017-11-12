@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\FieldValue">
+
+    <storage>
+        <default table="fields_values"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="field_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="item_id"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="value"
+            type="text"
+            required="true"
+            default=""
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

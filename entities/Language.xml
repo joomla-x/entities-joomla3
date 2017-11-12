@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Language">
+
+    <storage>
+        <default table="languages"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="lang_id"
+            type="int"
+            required="true"
+            input="text"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            description="JGLOBAL_FIELD_ID_DESC"
+            default="0"
+            readonly="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="asset_id"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="lang_code"
+            type="char"
+            required="true"
+            input="text"
+            label="COM_LANGUAGES_FIELD_LANG_TAG_LABEL"
+            description="COM_LANGUAGES_FIELD_LANG_TAG_DESC"
+            size="10"
+        >
+            <validation rule="maxlen" value="10"/>
+        </field>
+
+        <field
+            name="title"
+            type="varchar"
+            required="true"
+            input="text"
+            label="JGLOBAL_TITLE"
+            description="COM_LANGUAGES_FIELD_TITLE_DESC"
+            size="40"
+        >
+            <validation rule="maxlen" value="40"/>
+        </field>
+
+        <field
+            name="title_native"
+            type="varchar"
+            required="true"
+            input="text"
+            label="COM_LANGUAGES_FIELD_TITLE_NATIVE_LABEL"
+            description="COM_LANGUAGES_FIELD_TITLE_NATIVE_DESC"
+            size="40"
+        >
+            <validation rule="maxlen" value="40"/>
+        </field>
+
+        <field
+            name="sef"
+            type="varchar"
+            required="true"
+            input="text"
+            label="COM_LANGUAGES_FIELD_LANG_CODE_LABEL"
+            description="COM_LANGUAGES_FIELD_LANG_CODE_DESC"
+            size="10"
+        >
+            <validation rule="maxlen" value="10"/>
+        </field>
+
+        <field
+            name="image"
+            type="varchar"
+            required="true"
+            input="filelist"
+            label="COM_LANGUAGES_FIELD_IMAGE_LABEL"
+            description="COM_LANGUAGES_FIELD_IMAGE_DESC"
+            filter="\.gif$"
+            size="10"
+        >
+            <option value="">JNONE</option>
+            <validation rule="maxlen" value="10"/>
+        </field>
+
+        <field
+            name="description"
+            type="varchar"
+            required="true"
+            input="textarea"
+            label="JGLOBAL_DESCRIPTION"
+            description="COM_LANGUAGES_FIELD_DESCRIPTION_DESC"
+        >
+        </field>
+
+        <field
+            name="metakey"
+            type="text"
+            required="true"
+            input="textarea"
+            label="JFIELD_META_KEYWORDS_LABEL"
+            description="JFIELD_META_KEYWORDS_DESC"
+        >
+        </field>
+
+        <field
+            name="metadesc"
+            type="text"
+            required="true"
+            input="textarea"
+            label="JFIELD_META_DESCRIPTION_LABEL"
+            description="JFIELD_META_DESCRIPTION_DESC"
+        >
+        </field>
+
+        <field
+            name="sitename"
+            type="varchar"
+            required="true"
+            default=""
+            input="text"
+            label="COM_LANGUAGES_FIELD_SITE_NAME_LABEL"
+            description="COM_LANGUAGES_FIELD_SITE_NAME_DESC"
+            filter="string"
+            size="50"
+        >
+            <validation rule="maxlen" value="50"/>
+        </field>
+
+        <field
+            name="published"
+            type="int"
+            required="true"
+            default="1"
+            input="list"
+            label="JSTATUS"
+            description="COM_LANGUAGES_FIELD_PUBLISHED_DESC"
+            size="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASHED</option>
+            <validation rule="integer"/>
+            <validation rule="minvalue" value="-9"/>
+            <validation rule="maxvalue" value="9"/>
+        </field>
+
+        <field
+            name="access"
+            type="int"
+            required="true"
+            default="0"
+            input="accesslevel"
+            label="JFIELD_ACCESS_LABEL"
+            description="JFIELD_ACCESS_DESC"
+            size="1"
+        >
+            <validation rule="integer"/>
+            <validation rule="minvalue" value="-9"/>
+            <validation rule="maxvalue" value="9"/>
+        </field>
+
+        <field
+            name="ordering"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

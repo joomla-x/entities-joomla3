@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\FinderTaxonomy">
+
+    <storage>
+        <default table="finder_taxonomy"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="parent_id"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="title"
+            type="varchar"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="state"
+            type="boolean"
+            required="true"
+            default="1"
+        >
+        </field>
+
+        <field
+            name="access"
+            type="boolean"
+            required="true"
+            default="0"
+        >
+        </field>
+
+        <field
+            name="ordering"
+            type="boolean"
+            required="true"
+            default="0"
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

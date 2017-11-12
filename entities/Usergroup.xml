@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\Usergroup">
+
+    <storage>
+        <default table="usergroups"/>
+    </storage>
+
+    <fields>
+
+        <!-- Primary Key -->
+        <field
+            name="id"
+            type="int"
+            required="true"
+            input="hidden"
+            default="0"
+            readonly="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Adjacency List Reference Id -->
+        <field
+            name="parent_id"
+            type="int"
+            required="true"
+            default="0"
+            input="groupparent"
+            label="COM_USERS_GROUP_FIELD_PARENT_LABEL"
+            description="COM_USERS_GROUP_FIELD_PARENT_DESC"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Nested set lft. -->
+        <field
+            name="lft"
+            type="int"
+            required="true"
+            default="0"
+            input="hidden"
+            filter="unset"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Nested set rgt. -->
+        <field
+            name="rgt"
+            type="int"
+            required="true"
+            default="0"
+            input="hidden"
+            filter="unset"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="title"
+            type="varchar"
+            required="true"
+            default=""
+            input="text"
+            label="COM_USERS_GROUP_FIELD_TITLE_LABEL"
+            description="COM_USERS_GROUP_FIELD_TITLE_DESC"
+            size="40"
+        >
+            <validation rule="maxlen" value="40"/>
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

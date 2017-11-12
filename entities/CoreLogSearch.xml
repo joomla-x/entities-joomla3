@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\CoreLogSearch">
+
+    <storage>
+        <default table="core_log_searches"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="search_term"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <field
+            name="hits"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

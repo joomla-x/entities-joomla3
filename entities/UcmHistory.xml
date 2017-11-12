@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\UcmHistory">
+
+    <storage>
+        <default table="ucm_history"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="version_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="ucm_item_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <field
+            name="ucm_type_id"
+            type="int"
+            required="true"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Optional version name -->
+        <field
+            name="version_note"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <field
+            name="save_date"
+            type="datetime"
+            required="true"
+            default="0000-00-00 00:00:00"
+        >
+        </field>
+
+        <field
+            name="editor_user_id"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- Number of characters in this version. -->
+        <field
+            name="character_count"
+            type="int"
+            required="true"
+            default="0"
+        >
+            <validation rule="integer"/>
+        </field>
+
+        <!-- SHA1 hash of the version_data column. -->
+        <field
+            name="sha1_hash"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <!-- json-encoded string of version data -->
+        <field
+            name="version_data"
+            type="mediumtext"
+            required="true"
+        >
+        </field>
+
+        <field
+            name="keep_forever"
+            type="tinyint"
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>

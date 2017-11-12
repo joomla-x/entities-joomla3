@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entity xmlns="https://joomla.org/joomla-x/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://joomla.org/joomla-x/orm
+            https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
+        name="Joomla3\Entity\PostinstallMessage">
+
+    <storage>
+        <default table="postinstall_messages"/>
+    </storage>
+
+    <fields>
+
+        <field
+            name="postinstall_message_id"
+            type="bigint"
+            required="true"
+        >
+        </field>
+
+        <!-- FK to #__extensions -->
+        <field
+            name="extension_id"
+            type="bigint"
+            required="true"
+            default="700"
+        >
+        </field>
+
+        <!-- Lang key for the title -->
+        <field
+            name="title_key"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <!-- Lang key for description -->
+        <field
+            name="description_key"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <field
+            name="action_key"
+            type="varchar"
+            required="true"
+            default=""
+        >
+        </field>
+
+        <!-- Extension holding lang keys -->
+        <field
+            name="language_extension"
+            type="varchar"
+            required="true"
+            default="com_postinstall"
+        >
+        </field>
+
+        <field
+            name="language_client_id"
+            type="tinyint"
+            required="true"
+            default="1"
+        >
+        </field>
+
+        <field
+            name="type"
+            type="varchar"
+            required="true"
+            default="link"
+        >
+        </field>
+
+        <!-- RAD URI to the PHP file containing action method -->
+        <field
+            name="action_file"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <!-- Action method name or URL -->
+        <field
+            name="action"
+            type="varchar"
+            default=""
+        >
+        </field>
+
+        <!-- RAD URI to file holding display condition method -->
+        <field
+            name="condition_file"
+            type="varchar"
+            default="NULL"
+        >
+        </field>
+
+        <field
+            name="condition_method"
+            type="varchar"
+            default="NULL"
+        >
+        </field>
+
+        <!-- Version when this message was introduced -->
+        <field
+            name="version_introduced"
+            type="varchar"
+            required="true"
+            default="3.2.0"
+        >
+        </field>
+
+        <field
+            name="enabled"
+            type="tinyint"
+            required="true"
+            default="1"
+        >
+        </field>
+
+    </fields>
+
+    <relations>
+    </relations>
+
+</entity>
