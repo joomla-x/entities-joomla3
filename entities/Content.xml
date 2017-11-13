@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Content">
 
     <storage>
-        <default table="content"/>
+        <default table="content" primary="id"/>
     </storage>
 
     <fields>
@@ -379,6 +379,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="asset"
+            entity="Joomla3\Entity\Asset"
+            reference="asset_id"
+        />
+
+        <belongsTo
+            name="cat"
+            entity="Joomla3\Entity\Cat"
+            reference="catid"
+        />
     </relations>
 
 </entity>

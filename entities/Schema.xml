@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Schema">
 
     <storage>
-        <default table="schemas"/>
+        <default table="schemas" primary="extension_id,version_id"/>
     </storage>
 
     <fields>
@@ -29,6 +29,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="extension"
+            entity="Joomla3\Entity\Extension"
+            reference="extension_id"
+        />
+
+        <belongsTo
+            name="version"
+            entity="Joomla3\Entity\Version"
+            reference="version_id"
+        />
     </relations>
 
 </entity>

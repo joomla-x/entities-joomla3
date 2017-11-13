@@ -37,6 +37,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="field"
+            entity="Joomla3\Entity\Field"
+            reference="field_id"
+        />
+
+        <belongsTo
+            name="item"
+            entity="Joomla3\Entity\Item"
+            reference="item_id"
+        />
     </relations>
 
 </entity>

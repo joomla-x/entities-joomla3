@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Module">
 
     <storage>
-        <default table="modules"/>
+        <default table="modules" primary="id"/>
     </storage>
 
     <fields>
@@ -230,6 +230,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="asset"
+            entity="Joomla3\Entity\Asset"
+            reference="asset_id"
+        />
+
+        <belongsTo
+            name="client"
+            entity="Joomla3\Entity\Client"
+            reference="client_id"
+        />
     </relations>
 
 </entity>

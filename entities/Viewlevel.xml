@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Viewlevel">
 
     <storage>
-        <default table="viewlevels"/>
+        <default table="viewlevels" primary="id"/>
     </storage>
 
     <fields>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FinderTaxonomyMap">
 
     <storage>
-        <default table="finder_taxonomy_map"/>
+        <default table="finder_taxonomy_map" primary="link_id,node_id"/>
     </storage>
 
     <fields>
@@ -30,6 +30,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="link"
+            entity="Joomla3\Entity\FinderLink"
+            reference="link_id"
+        />
+
+        <belongsTo
+            name="node"
+            entity="Joomla3\Entity\Node"
+            reference="node_id"
+        />
     </relations>
 
 </entity>

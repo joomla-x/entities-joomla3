@@ -66,6 +66,29 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="core_content"
+            entity="Joomla3\Entity\CoreContent"
+            reference="core_content_id"
+        />
+
+        <belongsTo
+            name="content_item"
+            entity="Joomla3\Entity\ContentItem"
+            reference="content_item_id"
+        />
+
+        <belongsTo
+            name="tag"
+            entity="Joomla3\Entity\Tag"
+            reference="tag_id"
+        />
+
+        <belongsTo
+            name="type"
+            entity="Joomla3\Entity\ContentType"
+            reference="type_id"
+        />
     </relations>
 
 </entity>

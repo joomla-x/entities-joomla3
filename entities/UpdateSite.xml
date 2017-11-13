@@ -6,7 +6,7 @@
         name="Joomla3\Entity\UpdateSite">
 
     <storage>
-        <default table="update_sites"/>
+        <default table="update_sites" primary="update_site_id"/>
     </storage>
 
     <fields>

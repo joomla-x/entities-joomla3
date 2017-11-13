@@ -97,6 +97,29 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="version"
+            entity="Joomla3\Entity\Version"
+            reference="version_id"
+        />
+
+        <belongsTo
+            name="ucm_item"
+            entity="Joomla3\Entity\UcmItem"
+            reference="ucm_item_id"
+        />
+
+        <belongsTo
+            name="ucm_type"
+            entity="Joomla3\Entity\ContentType"
+            reference="ucm_type_id"
+        />
+
+        <belongsTo
+            name="editor_user"
+            entity="Joomla3\Entity\User"
+            reference="editor_user_id"
+        />
     </relations>
 
 </entity>

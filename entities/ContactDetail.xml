@@ -6,7 +6,7 @@
         name="Joomla3\Entity\ContactDetail">
 
     <storage>
-        <default table="contact_details"/>
+        <default table="contact_details" primary="id"/>
     </storage>
 
     <fields>
@@ -537,6 +537,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="user"
+            entity="Joomla3\Entity\User"
+            reference="user_id"
+        />
+
+        <belongsTo
+            name="cat"
+            entity="Joomla3\Entity\Cat"
+            reference="catid"
+        />
     </relations>
 
 </entity>

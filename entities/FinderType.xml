@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FinderType">
 
     <storage>
-        <default table="finder_types"/>
+        <default table="finder_types" primary="id"/>
     </storage>
 
     <fields>

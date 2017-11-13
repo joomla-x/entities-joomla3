@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FinderTerm">
 
     <storage>
-        <default table="finder_terms"/>
+        <default table="finder_terms" primary="term_id"/>
     </storage>
 
     <fields>

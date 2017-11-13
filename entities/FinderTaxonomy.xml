@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FinderTaxonomy">
 
     <storage>
-        <default table="finder_taxonomy"/>
+        <default table="finder_taxonomy" primary="id"/>
     </storage>
 
     <fields>
@@ -62,6 +62,17 @@
     </fields>
 
     <relations>
+        <hasMany
+            name="children"
+            entity="Joomla3\Entity\FinderTaxonomy"
+            reference="parent_id"
+        />
+
+        <belongsTo
+            name="parent"
+            entity="Joomla3\Entity\FinderTaxonomy"
+            reference="parent_id"
+        />
     </relations>
 
 </entity>

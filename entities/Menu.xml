@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Menu">
 
     <storage>
-        <default table="menu"/>
+        <default table="menu" primary="id"/>
     </storage>
 
     <fields>
@@ -243,6 +243,35 @@
     </fields>
 
     <relations>
+        <hasMany
+            name="children"
+            entity="Joomla3\Entity\Menu"
+            reference="parent_id"
+        />
+
+        <belongsTo
+            name="parent"
+            entity="Joomla3\Entity\Menu"
+            reference="parent_id"
+        />
+
+        <belongsTo
+            name="component"
+            entity="Joomla3\Entity\Component"
+            reference="component_id"
+        />
+
+        <belongsTo
+            name="template_style"
+            entity="Joomla3\Entity\TemplateStyle"
+            reference="template_style_id"
+        />
+
+        <belongsTo
+            name="client"
+            entity="Joomla3\Entity\Client"
+            reference="client_id"
+        />
     </relations>
 
 </entity>

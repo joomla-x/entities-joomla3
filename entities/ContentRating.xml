@@ -6,7 +6,7 @@
         name="Joomla3\Entity\ContentRating">
 
     <storage>
-        <default table="content_rating"/>
+        <default table="content_rating" primary="content_id"/>
     </storage>
 
     <fields>
@@ -49,6 +49,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="content"
+            entity="Joomla3\Entity\Content"
+            reference="content_id"
+        />
     </relations>
 
 </entity>

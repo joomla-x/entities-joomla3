@@ -6,7 +6,7 @@
         name="Joomla3\Entity\TemplateStyle">
 
     <storage>
-        <default table="template_styles"/>
+        <default table="template_styles" primary="id"/>
     </storage>
 
     <fields>
@@ -81,6 +81,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="client"
+            entity="Joomla3\Entity\Client"
+            reference="client_id"
+        />
     </relations>
 
 </entity>

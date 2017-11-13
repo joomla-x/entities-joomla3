@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Update">
 
     <storage>
-        <default table="updates"/>
+        <default table="updates" primary="update_id"/>
     </storage>
 
     <fields>
@@ -115,6 +115,23 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="update_site"
+            entity="Joomla3\Entity\UpdateSite"
+            reference="update_site_id"
+        />
+
+        <belongsTo
+            name="extension"
+            entity="Joomla3\Entity\Extension"
+            reference="extension_id"
+        />
+
+        <belongsTo
+            name="client"
+            entity="Joomla3\Entity\Client"
+            reference="client_id"
+        />
     </relations>
 
 </entity>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FinderLinkTerms1">
 
     <storage>
-        <default table="finder_links_terms1"/>
+        <default table="finder_links_terms1" primary="link_id,term_id"/>
     </storage>
 
     <fields>
@@ -37,6 +37,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="link"
+            entity="Joomla3\Entity\FinderLink"
+            reference="link_id"
+        />
+
+        <belongsTo
+            name="term"
+            entity="Joomla3\Entity\FinderTerm"
+            reference="term_id"
+        />
     </relations>
 
 </entity>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\UserUsergroupMap">
 
     <storage>
-        <default table="user_usergroup_map"/>
+        <default table="user_usergroup_map" primary="user_id,group_id"/>
     </storage>
 
     <fields>
@@ -34,6 +34,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="user"
+            entity="Joomla3\Entity\User"
+            reference="user_id"
+        />
+
+        <belongsTo
+            name="group"
+            entity="Joomla3\Entity\SpecifyGroup"
+            reference="group_id"
+        />
     </relations>
 
 </entity>

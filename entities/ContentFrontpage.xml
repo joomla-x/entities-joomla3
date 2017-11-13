@@ -6,7 +6,7 @@
         name="Joomla3\Entity\ContentFrontpage">
 
     <storage>
-        <default table="content_frontpage"/>
+        <default table="content_frontpage" primary="content_id"/>
     </storage>
 
     <fields>
@@ -32,6 +32,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="content"
+            entity="Joomla3\Entity\Content"
+            reference="content_id"
+        />
     </relations>
 
 </entity>

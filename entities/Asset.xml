@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Asset">
 
     <storage>
-        <default table="assets"/>
+        <default table="assets" primary="id"/>
     </storage>
 
     <fields>
@@ -86,6 +86,17 @@
     </fields>
 
     <relations>
+        <hasMany
+            name="children"
+            entity="Joomla3\Entity\Asset"
+            reference="parent_id"
+        />
+
+        <belongsTo
+            name="parent"
+            entity="Joomla3\Entity\Asset"
+            reference="parent_id"
+        />
     </relations>
 
 </entity>

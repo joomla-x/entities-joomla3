@@ -6,7 +6,7 @@
         name="Joomla3\Entity\User">
 
     <storage>
-        <default table="users"/>
+        <default table="users" primary="id"/>
     </storage>
 
     <fields>

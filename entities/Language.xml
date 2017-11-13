@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Language">
 
     <storage>
-        <default table="languages"/>
+        <default table="languages" primary="lang_id"/>
     </storage>
 
     <fields>
@@ -184,6 +184,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="asset"
+            entity="Joomla3\Entity\Asset"
+            reference="asset_id"
+        />
     </relations>
 
 </entity>

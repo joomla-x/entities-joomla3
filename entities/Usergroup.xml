@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Usergroup">
 
     <storage>
-        <default table="usergroups"/>
+        <default table="usergroups" primary="id"/>
     </storage>
 
     <fields>
@@ -76,6 +76,17 @@
     </fields>
 
     <relations>
+        <hasMany
+            name="children"
+            entity="Joomla3\Entity\Usergroup"
+            reference="parent_id"
+        />
+
+        <belongsTo
+            name="parent"
+            entity="Joomla3\Entity\Usergroup"
+            reference="parent_id"
+        />
     </relations>
 
 </entity>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Overrider">
 
     <storage>
-        <default table="overrider"/>
+        <default table="overrider" primary="id"/>
     </storage>
 
     <fields>

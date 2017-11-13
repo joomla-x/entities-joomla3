@@ -96,6 +96,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="term"
+            entity="Joomla3\Entity\FinderTerm"
+            reference="term_id"
+        />
     </relations>
 
 </entity>

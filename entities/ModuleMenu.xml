@@ -6,7 +6,7 @@
         name="Joomla3\Entity\ModuleMenu">
 
     <storage>
-        <default table="modules_menu"/>
+        <default table="modules_menu" primary="moduleid,menuid"/>
     </storage>
 
     <fields>
@@ -32,6 +32,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="module"
+            entity="Joomla3\Entity\Module"
+            reference="moduleid"
+        />
+
+        <belongsTo
+            name="menu"
+            entity="Joomla3\Entity\Menu"
+            reference="menuid"
+        />
     </relations>
 
 </entity>

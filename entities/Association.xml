@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Association">
 
     <storage>
-        <default table="associations"/>
+        <default table="associations" primary="context,id"/>
     </storage>
 
     <fields>

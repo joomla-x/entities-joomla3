@@ -6,7 +6,7 @@
         name="Joomla3\Entity\ContentType">
 
     <storage>
-        <default table="content_types"/>
+        <default table="content_types" primary="type_id"/>
     </storage>
 
     <fields>

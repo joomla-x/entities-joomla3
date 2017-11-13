@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Banner">
 
     <storage>
-        <default table="banners"/>
+        <default table="banners" primary="id"/>
     </storage>
 
     <fields>
@@ -438,6 +438,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="c"
+            entity="Joomla3\Entity\C"
+            reference="cid"
+        />
+
+        <belongsTo
+            name="cat"
+            entity="Joomla3\Entity\Cat"
+            reference="catid"
+        />
     </relations>
 
 </entity>

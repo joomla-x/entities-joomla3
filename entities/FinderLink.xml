@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FinderLink">
 
     <storage>
-        <default table="finder_links"/>
+        <default table="finder_links" primary="link_id"/>
     </storage>
 
     <fields>
@@ -159,6 +159,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="type"
+            entity="Joomla3\Entity\ContentType"
+            reference="type_id"
+        />
     </relations>
 
 </entity>

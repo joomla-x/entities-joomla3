@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Field">
 
     <storage>
-        <default table="fields"/>
+        <default table="fields" primary="id"/>
     </storage>
 
     <fields>
@@ -298,6 +298,23 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="asset"
+            entity="Joomla3\Entity\Asset"
+            reference="asset_id"
+        />
+
+        <belongsTo
+            name="group"
+            entity="Joomla3\Entity\SpecifyGroup"
+            reference="group_id"
+        />
+
+        <belongsTo
+            name="created_user"
+            entity="Joomla3\Entity\User"
+            reference="created_user_id"
+        />
     </relations>
 
 </entity>

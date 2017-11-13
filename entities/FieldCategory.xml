@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FieldCategory">
 
     <storage>
-        <default table="fields_categories"/>
+        <default table="fields_categories" primary="field_id,category_id"/>
     </storage>
 
     <fields>
@@ -32,6 +32,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="field"
+            entity="Joomla3\Entity\Field"
+            reference="field_id"
+        />
+
+        <belongsTo
+            name="category"
+            entity="Joomla3\Entity\Category"
+            reference="category_id"
+        />
     </relations>
 
 </entity>

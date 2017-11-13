@@ -114,10 +114,10 @@ class User
         if (property_exists($this, $property)) {
             return $this->{$property} = $value;
         }
-
+        
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-
+    
     /**
      * Getter
      *
@@ -136,10 +136,10 @@ class User
         if (property_exists($this, $property)) {
             return $this->{$property};
         }
-
+        
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-
+    
     /**
      * Set the id value
      *

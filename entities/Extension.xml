@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Extension">
 
     <storage>
-        <default table="extensions"/>
+        <default table="extensions" primary="extension_id"/>
     </storage>
 
     <fields>
@@ -153,6 +153,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="package"
+            entity="Joomla3\Entity\Package"
+            reference="package_id"
+        />
+
+        <belongsTo
+            name="client"
+            entity="Joomla3\Entity\Client"
+            reference="client_id"
+        />
     </relations>
 
 </entity>

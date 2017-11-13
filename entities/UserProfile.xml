@@ -45,6 +45,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="user"
+            entity="Joomla3\Entity\User"
+            reference="user_id"
+        />
     </relations>
 
 </entity>

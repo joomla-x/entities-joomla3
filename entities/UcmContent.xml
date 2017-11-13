@@ -6,7 +6,7 @@
         name="Joomla3\Entity\UcmContent">
 
     <storage>
-        <default table="ucm_content"/>
+        <default table="ucm_content" primary="core_content_id"/>
     </storage>
 
     <fields>
@@ -287,6 +287,53 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="core_content"
+            entity="Joomla3\Entity\CoreContent"
+            reference="core_content_id"
+        />
+
+        <belongsTo
+            name="core_checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="core_checked_out_user_id"
+        />
+
+        <belongsTo
+            name="core_created_user"
+            entity="Joomla3\Entity\User"
+            reference="core_created_user_id"
+        />
+
+        <belongsTo
+            name="core_modified_user"
+            entity="Joomla3\Entity\User"
+            reference="core_modified_user_id"
+        />
+
+        <belongsTo
+            name="core_content_item"
+            entity="Joomla3\Entity\CoreContentItem"
+            reference="core_content_item_id"
+        />
+
+        <belongsTo
+            name="asset"
+            entity="Joomla3\Entity\Asset"
+            reference="asset_id"
+        />
+
+        <belongsTo
+            name="core_cat"
+            entity="Joomla3\Entity\CoreCat"
+            reference="core_catid"
+        />
+
+        <belongsTo
+            name="core_type"
+            entity="Joomla3\Entity\ContentType"
+            reference="core_type_id"
+        />
     </relations>
 
 </entity>

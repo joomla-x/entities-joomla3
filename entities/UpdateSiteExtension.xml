@@ -6,7 +6,7 @@
         name="Joomla3\Entity\UpdateSiteExtension">
 
     <storage>
-        <default table="update_sites_extensions"/>
+        <default table="update_sites_extensions" primary="update_site_id,extension_id"/>
     </storage>
 
     <fields>
@@ -32,6 +32,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="update_site"
+            entity="Joomla3\Entity\UpdateSite"
+            reference="update_site_id"
+        />
+
+        <belongsTo
+            name="extension"
+            entity="Joomla3\Entity\Extension"
+            reference="extension_id"
+        />
     </relations>
 
 </entity>

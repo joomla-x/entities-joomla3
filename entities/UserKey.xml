@@ -6,7 +6,7 @@
         name="Joomla3\Entity\UserKey">
 
     <storage>
-        <default table="user_keys"/>
+        <default table="user_keys" primary="id"/>
     </storage>
 
     <fields>
@@ -64,6 +64,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="user"
+            entity="Joomla3\Entity\User"
+            reference="user_id"
+        />
+
+        <belongsTo
+            name="inval"
+            entity="Joomla3\Entity\Inval"
+            reference="invalid"
+        />
     </relations>
 
 </entity>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Message">
 
     <storage>
-        <default table="messages"/>
+        <default table="messages" primary="message_id"/>
     </storage>
 
     <fields>
@@ -97,6 +97,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="folder"
+            entity="Joomla3\Entity\Folder"
+            reference="folder_id"
+        />
     </relations>
 
 </entity>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\BannerClient">
 
     <storage>
-        <default table="banner_clients"/>
+        <default table="banner_clients" primary="id"/>
     </storage>
 
     <fields>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\BannerTrack">
 
     <storage>
-        <default table="banner_tracks"/>
+        <default table="banner_tracks" primary="track_date,track_type,banner_id"/>
     </storage>
 
     <fields>
@@ -46,6 +46,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="banner"
+            entity="Joomla3\Entity\Banner"
+            reference="banner_id"
+        />
     </relations>
 
 </entity>

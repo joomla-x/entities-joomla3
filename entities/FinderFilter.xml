@@ -6,7 +6,7 @@
         name="Joomla3\Entity\FinderFilter">
 
     <storage>
-        <default table="finder_filters"/>
+        <default table="finder_filters" primary="filter_id"/>
     </storage>
 
     <fields>
@@ -184,6 +184,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="filter"
+            entity="Joomla3\Entity\Filter"
+            reference="filter_id"
+        />
     </relations>
 
 </entity>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Session">
 
     <storage>
-        <default table="session"/>
+        <default table="session" primary="session_id"/>
     </storage>
 
     <fields>
@@ -64,6 +64,17 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="client"
+            entity="Joomla3\Entity\Client"
+            reference="client_id"
+        />
+
+        <belongsTo
+            name="user"
+            entity="Joomla3\Entity\User"
+            reference="userid"
+        />
     </relations>
 
 </entity>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\RedirectLink">
 
     <storage>
-        <default table="redirect_links"/>
+        <default table="redirect_links" primary="id"/>
     </storage>
 
     <fields>

@@ -6,7 +6,7 @@
         name="Joomla3\Entity\Newsfeed">
 
     <storage>
-        <default table="newsfeeds"/>
+        <default table="newsfeeds" primary="id"/>
     </storage>
 
     <fields>
@@ -397,6 +397,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="cat"
+            entity="Joomla3\Entity\Cat"
+            reference="catid"
+        />
     </relations>
 
 </entity>
