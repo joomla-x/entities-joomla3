@@ -1,0 +1,12 @@
+{
+  "name": "joomla-x/entities-joomla3",
+  "description": "ORM entity definitions for Joomla!3 entities",
+  "minimum-stability": "stable",
+  "license": "GPL2+",
+  "authors": [
+    {
+      "name": "Niels Braczek",
+      "email": "nbraczek@bsds.de"
+    }
+  ]
+}
