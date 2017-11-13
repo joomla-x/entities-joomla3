@@ -306,7 +306,7 @@
 
         <belongsTo
             name="group"
-            entity="Joomla3\Entity\SpecifyGroup"
+            entity="Joomla3\Entity\FieldGroup"
             reference="group_id"
         />
 
@@ -314,6 +314,18 @@
             name="created_user"
             entity="Joomla3\Entity\User"
             reference="created_user_id"
+        />
+
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
+        />
+
+        <belongsTo
+            name="modified_user"
+            entity="Joomla3\Entity\User"
+            reference="modified_by"
         />
     </relations>
 

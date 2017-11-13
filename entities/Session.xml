@@ -65,12 +65,6 @@
 
     <relations>
         <belongsTo
-            name="client"
-            entity="Joomla3\Entity\Client"
-            reference="client_id"
-        />
-
-        <belongsTo
             name="user"
             entity="Joomla3\Entity\User"
             reference="userid"

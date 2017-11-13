@@ -153,16 +153,22 @@
     </fields>
 
     <relations>
-        <belongsTo
-            name="package"
-            entity="Joomla3\Entity\Package"
+        <hasMany
+            name="parts"
+            entity="Joomla3\Entity\Extension"
             reference="package_id"
         />
 
         <belongsTo
-            name="client"
-            entity="Joomla3\Entity\Client"
-            reference="client_id"
+            name="package"
+            entity="Joomla3\Entity\Extension"
+            reference="package_id"
+        />
+
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
         />
     </relations>
 

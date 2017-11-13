@@ -3,7 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\UserUsergroupMap">
+        name="Joomla3\Entity\UserUsergroupMap"
+        role="map">
 
     <storage>
         <default table="user_usergroup_map" primary="user_id,group_id"/>
@@ -42,7 +43,7 @@
 
         <belongsTo
             name="group"
-            entity="Joomla3\Entity\SpecifyGroup"
+            entity="Joomla3\Entity\Usergroup"
             reference="group_id"
         />
     </relations>

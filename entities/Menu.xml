@@ -257,7 +257,7 @@
 
         <belongsTo
             name="component"
-            entity="Joomla3\Entity\Component"
+            entity="Joomla3\Entity\Extension"
             reference="component_id"
         />
 
@@ -268,9 +268,9 @@
         />
 
         <belongsTo
-            name="client"
-            entity="Joomla3\Entity\Client"
-            reference="client_id"
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
         />
     </relations>
 

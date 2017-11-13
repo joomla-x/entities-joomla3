@@ -1,6 +1,6 @@
 <?php
 /**
- * FinderLinkTerms3 Entity Declaration
+ * ContentTagMap Entity Declaration
  *
  * @copyright  Copyright (C) 2015-2017 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE
@@ -11,24 +11,39 @@ namespace Joomla3\Entity;
 use Joomla\ORM\Exception\PropertyNotFoundException;
 
 /**
- * FinderLinkTerms3 Entity Class
+ * ContentTagMap Entity Class
  */
-class FinderLinkTerms3
+class ContentTagMap
 {
     /**
-     * @var  int
+     * @var  string
      */
-    private $linkId;
+    private $typeAlias = '';
 
     /**
-     * @var  int
+     * @var  int  PK from the core content table
      */
-    private $termId;
+    private $coreContentId;
 
     /**
-     * @var  float
+     * @var  int  PK from the content type table
      */
-    private $weight;
+    private $contentItemId;
+
+    /**
+     * @var  int  PK from the tag table
+     */
+    private $tagId;
+
+    /**
+     * @var  int  Date of most recent save for this tag-item
+     */
+    private $tagDate = 0;
+
+    /**
+     * @var  int  PK from the content_type table
+     */
+    private $typeId;
 
     /**
      * Redirect assignments through a setter, if available
@@ -49,10 +64,10 @@ class FinderLinkTerms3
         if (property_exists($this, $property)) {
             return $this->{$property} = $value;
         }
-        
+
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-    
+
     /**
      * Getter
      *
@@ -71,43 +86,79 @@ class FinderLinkTerms3
         if (property_exists($this, $property)) {
             return $this->{$property};
         }
-        
+
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-    
+
     /**
-     * Set the linkId value
+     * Set the typeAlias value
+     *
+     * @param  string  $value
+     *
+     * @return string
+     */
+    protected function setTypeAlias($value)
+    {
+        return $this->typeAlias = (string)$value;
+    }
+
+    /**
+     * Set the coreContentId value
      *
      * @param  int  $value
      *
      * @return int
      */
-    protected function setLinkId($value)
+    protected function setCoreContentId($value)
     {
-        return $this->linkId = (int)$value;
+        return $this->coreContentId = (int)$value;
     }
 
     /**
-     * Set the termId value
+     * Set the contentItemId value
      *
      * @param  int  $value
      *
      * @return int
      */
-    protected function setTermId($value)
+    protected function setContentItemId($value)
     {
-        return $this->termId = (int)$value;
+        return $this->contentItemId = (int)$value;
     }
 
     /**
-     * Set the weight value
+     * Set the tagId value
      *
-     * @param  float  $value
+     * @param  int  $value
      *
-     * @return float
+     * @return int
      */
-    protected function setWeight($value)
+    protected function setTagId($value)
     {
-        return $this->weight = (float)$value;
+        return $this->tagId = (int)$value;
+    }
+
+    /**
+     * Set the tagDate value
+     *
+     * @param  int  $value
+     *
+     * @return int
+     */
+    protected function setTagDate($value)
+    {
+        return $this->tagDate = (int)$value;
+    }
+
+    /**
+     * Set the typeId value
+     *
+     * @param  int  $value
+     *
+     * @return int
+     */
+    protected function setTypeId($value)
+    {
+        return $this->typeId = (int)$value;
     }
 }

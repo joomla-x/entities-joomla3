@@ -3,7 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\Viewlevel">
+        name="Joomla3\Entity\Viewlevel"
+        role="lookup">
 
     <storage>
         <default table="viewlevels" primary="id"/>
@@ -51,7 +52,7 @@
         <!-- JSON encoded access control. -->
         <field
             name="rules"
-            type="varchar"
+            type="json"
             required="true"
             input="hidden"
             filter="int_array"

@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\Content">
+        name="Joomla3\Entity\Article">
 
     <storage>
         <default table="content" primary="id"/>
@@ -386,9 +386,27 @@
         />
 
         <belongsTo
-            name="cat"
-            entity="Joomla3\Entity\Cat"
+            name="category"
+            entity="Joomla3\Entity\Category"
             reference="catid"
+        />
+
+        <belongsTo
+            name="created_by_user"
+            entity="Joomla3\Entity\User"
+            reference="created_by"
+        />
+
+        <belongsTo
+            name="modified_by_user"
+            entity="Joomla3\Entity\User"
+            reference="modified_by"
+        />
+
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
         />
     </relations>
 

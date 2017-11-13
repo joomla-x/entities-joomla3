@@ -126,12 +126,6 @@
             entity="Joomla3\Entity\Extension"
             reference="extension_id"
         />
-
-        <belongsTo
-            name="client"
-            entity="Joomla3\Entity\Client"
-            reference="client_id"
-        />
     </relations>
 
 </entity>

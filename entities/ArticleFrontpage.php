@@ -1,6 +1,6 @@
 <?php
 /**
- * FinderLinkTerms4 Entity Declaration
+ * ArticleFrontpage Entity Declaration
  *
  * @copyright  Copyright (C) 2015-2017 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE
@@ -11,24 +11,19 @@ namespace Joomla3\Entity;
 use Joomla\ORM\Exception\PropertyNotFoundException;
 
 /**
- * FinderLinkTerms4 Entity Class
+ * ArticleFrontpage Entity Class
  */
-class FinderLinkTerms4
+class ArticleFrontpage
 {
     /**
      * @var  int
      */
-    private $linkId;
+    private $contentId = 0;
 
     /**
      * @var  int
      */
-    private $termId;
-
-    /**
-     * @var  float
-     */
-    private $weight;
+    private $ordering = 0;
 
     /**
      * Redirect assignments through a setter, if available
@@ -49,10 +44,10 @@ class FinderLinkTerms4
         if (property_exists($this, $property)) {
             return $this->{$property} = $value;
         }
-        
+
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-    
+
     /**
      * Getter
      *
@@ -71,43 +66,31 @@ class FinderLinkTerms4
         if (property_exists($this, $property)) {
             return $this->{$property};
         }
-        
+
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-    
+
     /**
-     * Set the linkId value
+     * Set the contentId value
      *
      * @param  int  $value
      *
      * @return int
      */
-    protected function setLinkId($value)
+    protected function setContentId($value)
     {
-        return $this->linkId = (int)$value;
+        return $this->contentId = (int)$value;
     }
 
     /**
-     * Set the termId value
+     * Set the ordering value
      *
      * @param  int  $value
      *
      * @return int
      */
-    protected function setTermId($value)
+    protected function setOrdering($value)
     {
-        return $this->termId = (int)$value;
-    }
-
-    /**
-     * Set the weight value
-     *
-     * @param  float  $value
-     *
-     * @return float
-     */
-    protected function setWeight($value)
-    {
-        return $this->weight = (float)$value;
+        return $this->ordering = (int)$value;
     }
 }

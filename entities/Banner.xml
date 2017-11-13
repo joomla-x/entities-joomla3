@@ -439,15 +439,33 @@
 
     <relations>
         <belongsTo
-            name="c"
-            entity="Joomla3\Entity\C"
+            name="client"
+            entity="Joomla3\Entity\BannerClient"
             reference="cid"
         />
 
         <belongsTo
-            name="cat"
-            entity="Joomla3\Entity\Cat"
+            name="category"
+            entity="Joomla3\Entity\Category"
             reference="catid"
+        />
+
+        <belongsTo
+            name="created_by_user"
+            entity="Joomla3\Entity\User"
+            reference="created_by"
+        />
+
+        <belongsTo
+            name="modified_by_user"
+            entity="Joomla3\Entity\User"
+            reference="modified_by"
+        />
+
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
         />
     </relations>
 

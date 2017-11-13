@@ -47,14 +47,14 @@
 
     <relations>
         <belongsTo
-            name="ucm"
+            name="ucm_content"
             entity="Joomla3\Entity\UcmContent"
             reference="ucm_id"
         />
 
         <belongsTo
             name="ucm_item"
-            entity="Joomla3\Entity\UcmItem"
+            entity="@ucm_content.core_type_alias"
             reference="ucm_item_id"
         />
 

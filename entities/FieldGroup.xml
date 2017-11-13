@@ -222,6 +222,24 @@
             entity="Joomla3\Entity\Asset"
             reference="asset_id"
         />
+
+        <belongsTo
+            name="created_user"
+            entity="Joomla3\Entity\User"
+            reference="created_by"
+        />
+
+        <belongsTo
+            name="modified_user"
+            entity="Joomla3\Entity\User"
+            reference="modified_by"
+        />
+
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
+        />
     </relations>
 
 </entity>

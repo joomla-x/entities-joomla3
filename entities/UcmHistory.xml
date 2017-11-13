@@ -6,7 +6,7 @@
         name="Joomla3\Entity\UcmHistory">
 
     <storage>
-        <default table="ucm_history"/>
+        <default table="ucm_history" primary="version_id"/>
     </storage>
 
     <fields>
@@ -98,14 +98,8 @@
 
     <relations>
         <belongsTo
-            name="version"
-            entity="Joomla3\Entity\Version"
-            reference="version_id"
-        />
-
-        <belongsTo
-            name="ucm_item"
-            entity="Joomla3\Entity\UcmItem"
+            name="ucm_content"
+            entity="Joomla3\Entity\UcmContent"
             reference="ucm_item_id"
         />
 
@@ -116,7 +110,7 @@
         />
 
         <belongsTo
-            name="editor_user"
+            name="editor"
             entity="Joomla3\Entity\User"
             reference="editor_user_id"
         />

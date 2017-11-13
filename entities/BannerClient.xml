@@ -188,6 +188,11 @@
     </fields>
 
     <relations>
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
+        />
     </relations>
 
 </entity>

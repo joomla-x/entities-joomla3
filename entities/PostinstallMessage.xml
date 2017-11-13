@@ -134,12 +134,6 @@
             entity="Joomla3\Entity\Extension"
             reference="extension_id"
         />
-
-        <belongsTo
-            name="language_client"
-            entity="Joomla3\Entity\LanguageClient"
-            reference="language_client_id"
-        />
     </relations>
 
 </entity>

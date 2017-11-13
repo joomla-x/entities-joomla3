@@ -67,12 +67,6 @@
             entity="Joomla3\Entity\Asset"
             reference="asset_id"
         />
-
-        <belongsTo
-            name="client"
-            entity="Joomla3\Entity\Client"
-            reference="client_id"
-        />
     </relations>
 
 </entity>

@@ -45,7 +45,7 @@
 
         <belongsTo
             name="item"
-            entity="Joomla3\Entity\Item"
+            entity="@field.context"
             reference="item_id"
         />
     </relations>

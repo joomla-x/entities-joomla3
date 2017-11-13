@@ -288,12 +288,6 @@
 
     <relations>
         <belongsTo
-            name="core_content"
-            entity="Joomla3\Entity\CoreContent"
-            reference="core_content_id"
-        />
-
-        <belongsTo
             name="core_checked_out_user"
             entity="Joomla3\Entity\User"
             reference="core_checked_out_user_id"
@@ -313,7 +307,7 @@
 
         <belongsTo
             name="core_content_item"
-            entity="Joomla3\Entity\CoreContentItem"
+            entity="@core_type_alias"
             reference="core_content_item_id"
         />
 
@@ -324,8 +318,8 @@
         />
 
         <belongsTo
-            name="core_cat"
-            entity="Joomla3\Entity\CoreCat"
+            name="core_category"
+            entity="Joomla3\Entity\Category"
             reference="core_catid"
         />
 

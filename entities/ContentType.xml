@@ -3,7 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\ContentType">
+        name="Joomla3\Entity\ContentType"
+        role="lookup">
 
     <storage>
         <default table="content_types" primary="type_id"/>
@@ -68,7 +69,7 @@
         <!-- JSON string for com_contenthistory options -->
         <field
             name="content_history_options"
-            type="varchar"
+            type="json"
         >
         </field>
 

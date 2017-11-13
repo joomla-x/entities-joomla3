@@ -3,7 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\ModuleMenu">
+        name="Joomla3\Entity\ModuleMenu"
+        role="map">
 
     <storage>
         <default table="modules_menu" primary="moduleid,menuid"/>

@@ -3,7 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\UpdateSiteExtension">
+        name="Joomla3\Entity\UpdateSiteExtension"
+        role="map">
 
     <storage>
         <default table="update_sites_extensions" primary="update_site_id,extension_id"/>

@@ -34,11 +34,8 @@
             input="user"
             label="COM_USERS_FIELD_USER_ID_LABEL"
             description="JLIB_FORM_SELECT_USER"
-            size="50"
         >
             <validation rule="integer"/>
-            <validation rule="minvalue" value="-99999999999999999999999999999999999999999999999999"/>
-            <validation rule="maxvalue" value="99999999999999999999999999999999999999999999999999"/>
         </field>
 
         <field
@@ -207,8 +204,8 @@
         />
 
         <belongsTo
-            name="cat"
-            entity="Joomla3\Entity\Cat"
+            name="category"
+            entity="Joomla3\Entity\Category"
             reference="catid"
         />
 
@@ -222,6 +219,12 @@
             name="modified_user"
             entity="Joomla3\Entity\User"
             reference="modified_user_id"
+        />
+
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
         />
     </relations>
 

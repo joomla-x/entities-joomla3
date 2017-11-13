@@ -3,7 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\ContentitemTagMap">
+        name="Joomla3\Entity\ContentTagMap"
+        role="map">
 
     <storage>
         <default table="contentitem_tag_map"/>
@@ -67,14 +68,14 @@
 
     <relations>
         <belongsTo
-            name="core_content"
-            entity="Joomla3\Entity\CoreContent"
+            name="ucm_content"
+            entity="Joomla3\Entity\UcmContent"
             reference="core_content_id"
         />
 
         <belongsTo
             name="content_item"
-            entity="Joomla3\Entity\ContentItem"
+            entity="@type_alias"
             reference="content_item_id"
         />
 

@@ -3,7 +3,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://joomla.org/joomla-x/orm
             https://raw.githubusercontent.com/joomla-x/orm/master/src/Definition/entity.xsd"
-        name="Joomla3\Entity\FieldCategory">
+        name="Joomla3\Entity\FieldCategory"
+        role="map">
 
     <storage>
         <default table="fields_categories" primary="field_id,category_id"/>

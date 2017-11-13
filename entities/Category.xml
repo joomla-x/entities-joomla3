@@ -361,6 +361,12 @@
             entity="Joomla3\Entity\User"
             reference="modified_user_id"
         />
+
+        <belongsTo
+            name="checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="checked_out"
+        />
     </relations>
 
 </entity>

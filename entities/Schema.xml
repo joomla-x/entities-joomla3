@@ -34,12 +34,6 @@
             entity="Joomla3\Entity\Extension"
             reference="extension_id"
         />
-
-        <belongsTo
-            name="version"
-            entity="Joomla3\Entity\Version"
-            reference="version_id"
-        />
     </relations>
 
 </entity>

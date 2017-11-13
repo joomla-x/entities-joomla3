@@ -98,9 +98,15 @@
 
     <relations>
         <belongsTo
-            name="folder"
-            entity="Joomla3\Entity\Folder"
-            reference="folder_id"
+            name="sender"
+            entity="Joomla3\Entity\User"
+            reference="user_id_from"
+        />
+
+        <belongsTo
+            name="recipient"
+            entity="Joomla3\Entity\User"
+            reference="user_id_to"
         />
     </relations>
 

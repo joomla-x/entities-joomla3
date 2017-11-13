@@ -51,7 +51,7 @@
     <relations>
         <belongsTo
             name="content"
-            entity="Joomla3\Entity\Content"
+            entity="Joomla3\Entity\Article"
             reference="content_id"
         />
     </relations>

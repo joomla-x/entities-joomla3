@@ -1,6 +1,6 @@
 <?php
 /**
- * Content Entity Declaration
+ * Article Entity Declaration
  *
  * @copyright  Copyright (C) 2015-2017 Open Source Matters, Inc. All rights reserved.
  * @license    GNU General Public License version 2 or later; see LICENSE
@@ -11,9 +11,9 @@ namespace Joomla3\Entity;
 use Joomla\ORM\Exception\PropertyNotFoundException;
 
 /**
- * Content Entity Class
+ * Article Entity Class
  */
-class Content
+class Article
 {
     /**
      * @var  int
@@ -184,10 +184,10 @@ class Content
         if (property_exists($this, $property)) {
             return $this->{$property} = $value;
         }
-        
+
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-    
+
     /**
      * Getter
      *
@@ -206,10 +206,10 @@ class Content
         if (property_exists($this, $property)) {
             return $this->{$property};
         }
-        
+
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-    
+
     /**
      * Set the id value
      *
