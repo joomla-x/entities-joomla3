@@ -549,11 +549,11 @@
             reference="catid"
         />
 
-        <belongsTo
+        <!-- belongsTo
             name="author"
             entity="Joomla3\Entity\User"
             reference="created_by"
-        />
+        /-->
 
         <!-- belongsTo
             name="modified_by_user"
