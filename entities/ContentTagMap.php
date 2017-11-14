@@ -61,11 +61,7 @@ class ContentTagMap
             return call_user_func([$this, $method], $value);
         }
 
-        if (property_exists($this, $property)) {
-            return $this->{$property} = $value;
-        }
-
-        throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
+        return $this->{$property} = $value;
     }
 
     /**

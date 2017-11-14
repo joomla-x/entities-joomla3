@@ -51,13 +51,9 @@ class BannerTrack
             return call_user_func([$this, $method], $value);
         }
 
-        if (property_exists($this, $property)) {
-            return $this->{$property} = $value;
-        }
-        
-        throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
+        return $this->{$property} = $value;
     }
-    
+
     /**
      * Getter
      *
@@ -76,10 +72,10 @@ class BannerTrack
         if (property_exists($this, $property)) {
             return $this->{$property};
         }
-        
+
         throw new PropertyNotFoundException("Property $property not found in " . get_class($this));
     }
-    
+
     /**
      * Set the trackDate value
      *
