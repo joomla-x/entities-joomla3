@@ -288,22 +288,22 @@
 
     <relations>
         <belongsTo
-            name="core_checked_out_user"
-            entity="Joomla3\Entity\User"
-            reference="core_checked_out_user_id"
-        />
-
-        <belongsTo
-            name="core_created_user"
+            name="author"
             entity="Joomla3\Entity\User"
             reference="core_created_user_id"
         />
 
-        <belongsTo
+        <!-- belongsTo
             name="core_modified_user"
             entity="Joomla3\Entity\User"
             reference="core_modified_user_id"
-        />
+        / -->
+
+        <!-- belongsTo
+            name="core_checked_out_user"
+            entity="Joomla3\Entity\User"
+            reference="core_checked_out_user_id"
+        / -->
 
         <belongsTo
             name="core_content_item"

@@ -69,12 +69,6 @@
             entity="Joomla3\Entity\User"
             reference="user_id"
         />
-
-        <belongsTo
-            name="inval"
-            entity="Joomla3\Entity\Inval"
-            reference="invalid"
-        />
     </relations>
 
 </entity>
